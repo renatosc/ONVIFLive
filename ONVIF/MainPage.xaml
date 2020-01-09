@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="ONVIF.MainPage" xmlns:shared="clr-namespace:LibVLCSharp.Forms.Shared;assembly=LibVLCSharp.Forms">
+    <Grid x:Name="MainGrid" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="CameraLabel" Text="Camera Selected: None" Grid.Row="0" Margin="20,0,0,0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+
+        <Entry x:Name="Login" Placeholder="login" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"  WidthRequest="100"/>
+        <Entry x:Name="Pass" Placeholder="password" Grid.Row="1" Grid.Column="1" IsPassword="true" HorizontalOptions="Center" WidthRequest="100" />
+        <Button Text="show" Grid.Row="1" Grid.Column="2" Clicked="OnShowTap" />
+
+        <shared:VideoView x:Name="VideoView" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
+    </Grid>
+</ContentPage>  
